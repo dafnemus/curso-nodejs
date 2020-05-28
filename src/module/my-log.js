@@ -7,4 +7,6 @@ function error(text) {
   return text;
 }
 
-module.exports = { info, error };
+module.exports.info = info;
+module.exports.error = error;
+//module.exports = { info, error };
