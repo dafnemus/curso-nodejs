@@ -14,6 +14,12 @@ app.get('/info', (request, response) => {
   info('Hola info');
   response.send('info nodemon 2');
 });
+
+app.get('/country', (request, response) => {
+  console.log('request.query', request.query);
+  response.json(countries[request.query.code]);
+});
+
 app.get('*', (request, response) => {
   response.status(404).send('NOT FOUND');
 });
@@ -36,7 +42,6 @@ app.get('*', (request, response) => {
 //     response.end();
 //   } else if (pathname === "/country") {
 //     response.writeHead(200, { "Conten-Type": "application/json" });
-//     response.write(JSON.stringify(countries[query.code]));
 //     response.end();
 //   } else if (pathname === "/error") {
 //     var result = error(pathname);
