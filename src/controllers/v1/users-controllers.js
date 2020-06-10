@@ -1,4 +1,6 @@
-const createUser = (req, res) => {};
+const createUser = (req, res) => {
+  res.send({ status: 'OK', message: 'user created' });
+};
 
 const deleteUser = (req, res) => {};
 
