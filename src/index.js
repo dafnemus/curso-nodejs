@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 const express = require('express');
-const routes = require('./routes');
+
+const routesV1 = require('./routes/v1');
 
 const app = express();
 
-routes(app);
+routesV1(app);
 
 app.listen(4000, () => {
   console.log('running on 4000');
