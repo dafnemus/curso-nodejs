@@ -7,8 +7,8 @@ const routesV1 = require('./routes/v1');
 
 const app = express();
 
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 routesV1(app);
 
