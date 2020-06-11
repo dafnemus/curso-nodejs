@@ -4,7 +4,9 @@ const usersController = require('../../controllers/v1/users-controllers');
 
 const router = express.Router();
 
-
+router.use((req, rest, next) => {
+  console.log('next'); next();
+});
 router.post('/create', usersController.createUser);
 router.post('/update', usersController.updateUser);
 router.post('/delete', usersController.deleteUser);
