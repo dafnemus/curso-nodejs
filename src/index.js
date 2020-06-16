@@ -2,6 +2,9 @@
 /* eslint-disable no-unused-vars */
 const express = require('express');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+
+dotenv.config(); // habilita las variables de entorno
 
 const routesV1 = require('./routes/v1');
 
