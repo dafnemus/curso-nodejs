@@ -9,6 +9,7 @@ const productSchema = new Schema(
     description: { type: String, required: true },
     price: { type: Number, required: true },
     images: [{ type: String, required: true }],
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   },
   {
     timestamps: true, // info de cuando  se creo el producto y cuando se modifico el mismo.
