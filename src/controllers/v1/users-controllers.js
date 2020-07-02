@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const bcrypt = require('bcrypt');
 
 const createUser = async (req, res) => {
