@@ -4,8 +4,6 @@ const Users = require('../../mongo/models/users');
 
 const createUser = async (req, res) => {
   try {
-    console.log('req.body', req.body);
-
     const {
       username, email, password, data,
     } = req.body;
@@ -34,7 +32,7 @@ const createUser = async (req, res) => {
       res.status(400).send({ status: 'DUPLICATED_VALUES', message: error.keyValue });
       return;
     }
-    console.log('error', error);
+    // console.log('error', error);
     res.status(500).send({ status: 'ERROR', message: error.message });
   }
 };
