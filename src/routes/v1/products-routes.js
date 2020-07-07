@@ -9,6 +9,8 @@ router.use((req, rest, next) => {
 });
 
 router.post('/create', productsController.createProduct);
+router.get('/get-all', productsController.getProduct);
+router.get('/get-by-user/:userId', productsController.getProduct);
 
 
 module.exports = router;
